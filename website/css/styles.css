@@ -8,21 +8,9 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-}
-
-body {
-  position: relative;
-  margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
 }
 
 /* Text Basic Styling */
-
-h1, h2, h3, p {
-    color: #181818;
-}
 
 /* Header Navigation */
 
@@ -111,7 +99,7 @@ h1, h2, h3, p {
 }
 
 .pure-menu-link {
-    color: #fff;    
+    color: #fff;
 }
 
 .brand {
@@ -184,116 +172,4 @@ max-width: 250px;
     background-color: #fff;
     max-width: 980px;
     margin: auto;
-}
-
-/* About Section */
-
-.about {
-    background-color: #fff;
-    max-width: 980px;
-    margin: auto;
-}
-
-.about-wrapper {
-    margin-left: 20px;
-}
-
-.about-info {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.about-info h3 {
-    margin: 0;
-    padding-top: 2px;
-}
-
-.about-info a {
-    text-decoration: none;
-    color: #181818;
-}
-
-.about-info a:hover {
-    text-decoration: underline;
-    color: #1f609d;
-}
-
-.about-margin {
-    margin: 0 20px;
-}
-
-.about-social-icons {
-    float: left;
-    margin: 5px, 0;
-    padding: 0;
-}
-
-.about-social-icons li {
-    list-style: none;
-    display: inline;
-}
-
-.about-social-icons a {
-    color: #181818;
-}
-
-.about-social-icons a:hover {
-    color: #1f609d;
-}
-
-/* Product Section */
-
-.product {
-    margin: 0 20px;
-}
-
-/* Footer Elements */
-
-.footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #181818;
-    color: #888;
-    text-align: center;
-    width:100%;
-}
-
-.social-icons {
-    display: block;
-    float: left;
-    padding-left: 20px;
-}
-
-.social-icons li {
-    display: inline;
-}
-
-.social-icons a {
-    color: #fff;
-}
-
-.social-icons a:hover {
-    color: #1f609d;
-}
-
-
-.footer-credit {
-    font-size: 75%;
-    float: right;
-    margin-right: 20px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    color: #888;
-}
-
-.footer-credit a {
-    color: #888;
-    text-decoration: none;
-}
-
-.footer-credit a:hover {
-    color: #fff;
 }
