@@ -1,0 +1,163 @@
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+/* Header */
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-top:#00bd75 3px solid;
+  border-bottom:#00bd75 3px solid;
+}
+
+/* used for the top branding*/
+header #branding{
+  float:left;
+}
+header #branding h1{
+  margin:0;
+}
+header #branding:hover{
+  color:#cccccc;
+}
+
+/* Styling for my name*/
+header .highlight:hover{
+  color:#cccccc;
+}
+header .highlight, header .current a{
+  color:#ffffff;
+  font-weight:bold;
+}
+
+/* for navigation buttons*/
+header nav{
+  float:right;
+  margin-top:15px;
+  margin-right:-100px;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 15px 0 18px;
+}
+
+header a:hover{
+  color:#cccccc;
+}
+
+/* First Education box */
+#firstedubox{
+  padding:20px;
+  margin-top:15px;
+  margin-right:420px;
+  text-align:left;
+  color:#000000;
+  background-color: #e4e4e4;
+  border: #868686 3px solid;
+  min-height: 750px;
+}
+#firstedubox p{
+  font: 18px/1.5 Helvetica;
+  font-size:20px;
+  margin-right:20%;
+}
+
+#firsthead{
+  margin-top:30px;
+  font-size:30px;
+  font-weight:bold;
+}
+
+#firstedubox .secondhead{
+  font-weight:bold;
+  margin-top:25px;
+  font-size:20px;
+}
+
+#firstedubox .indentul1{
+  font-size:16px;
+  margin-top:-20px;
+  margin-right:10%;
+  margin-left:12%;
+}
+#firstedubox h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#firstedubox .indentul2{
+  font-size:14px;
+  margin-left:10%;
+  margin-top:0px;
+}
+#uoftpic{
+  margin-left:38%;
+  margin-top:-130px;
+}
+
+/* Second Education box */
+#secondedubox{
+  padding:20px;
+  margin-top:-795px;
+  margin-left:600px;
+  min-height: 750px;
+  text-align:left;
+  color:#000000;
+  background-color: #e4e4e4;
+  border: #868686 3px solid;
+}
+#secondedubox p{
+  font: 18px/1.5 Helvetica;
+  font-size:20px;
+  margin-right:20%;
+}
+z
+#secondedubox .secondhead{
+  font-weight:bold;
+  margin-top:25px;
+  font-size:20px;
+}
+
+#secondedubox .indentul1{
+  font-size:16px;
+  margin-top:-20px;
+}
+
+#secondedubox .indentul2{
+  font-size:14px;
+  margin-top:0px;
+}
+
+/* The bottom border */
+#bottom_border{
+  margin-top:30px;
+  padding:24px;
+  background:#35424a;
+  border-top:#00bd75 3px solid;
+  border-bottom:#00bd75 3px solid;
+}
