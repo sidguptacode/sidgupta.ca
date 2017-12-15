@@ -70,6 +70,18 @@ header a:hover{
   color:#cccccc;
 }
 
+
+/* Showcase */
+#showcase{
+  text-align:left;
+  color:#000000;
+  margin-top: -100px;
+}
+#showcase p{
+  font: 18px/1.5 Helvetica;
+  font-size:20px;
+}
+
 /* The bottom border */
 #bottom_border{
   margin-top:30px;
