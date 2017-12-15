@@ -84,8 +84,10 @@ header a:hover{
 /* intro_image */
 #intro_image{
   margin-left:71%;
-  margin-top:-350px;
+  margin-top:-27%;
 }
+
+
 
 #intro_image .box{
   float:right;
