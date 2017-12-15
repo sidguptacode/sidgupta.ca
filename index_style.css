@@ -83,7 +83,7 @@ header a:hover{
 
 /* intro_image */
 #intro_image{
-  margin-left:63%;
+  margin-left:68%;
   margin-top:-350px;
 }
 
@@ -92,7 +92,6 @@ header a:hover{
 }
 
 #intro_image .box img{
-  width:90px;
 }
 
 /* The bottom border */
