@@ -104,3 +104,9 @@ header a:hover{
   border-top:#00bd75 3px solid;
   border-bottom:#00bd75 3px solid;
 }
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+}
