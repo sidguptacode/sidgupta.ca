@@ -25,6 +25,7 @@ header{
   min-height:70px;
   border-top:#00bd75 3px solid;
   border-bottom:#00bd75 3px solid;
+
 }
 
 /* used for the top branding*/
@@ -52,6 +53,7 @@ header nav{
   float:right;
   margin-top:15px;
   margin-right:-100px;
+
 }
 
 header a{
@@ -62,7 +64,8 @@ header a{
 header li{
   float:left;
   display:inline;
-  padding: 0 15px 0 18px;
+  padding: 0 15px 0 30px;
+
 }
 
 header a:hover{
@@ -136,7 +139,6 @@ header a:hover{
   font-size:20px;
   margin-right:20%;
 }
-z
 #secondedubox .secondhead{
   font-weight:bold;
   margin-top:25px;
@@ -153,11 +155,12 @@ z
   margin-top:0px;
 }
 
-/* The bottom border */
-#bottom_border{
+footer {
   margin-top:30px;
-  padding:24px;
+  padding:30px;
   background:#35424a;
   border-top:#00bd75 3px solid;
   border-bottom:#00bd75 3px solid;
+  bottom: 0;
+  position: relative;
 }
