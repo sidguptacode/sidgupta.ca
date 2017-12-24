@@ -83,11 +83,10 @@ header a:hover{
 
 /* intro_image */
 #intro_image{
-  margin-left:71%;
-  margin-top:-27%;
+  position: absolute;
+  top: 25%; bottom:0px; left: 67%; right:0;
+  margin: auto;
 }
-
-
 
 #intro_image .box{
   float:right;
@@ -105,18 +104,13 @@ header a:hover{
   border-bottom:#00bd75 3px solid;
 }
 
-#container {
-   height:100%;
-}
-
 footer {
   margin-top:30px;
   padding:30px;
   background:#35424a;
   border-top:#00bd75 3px solid;
   border-bottom:#00bd75 3px solid;
-  width: 100%;
   bottom: 0;
-  position: fixed;
+  position: relative;
 
 }
