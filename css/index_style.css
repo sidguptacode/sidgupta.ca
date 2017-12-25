@@ -52,6 +52,7 @@ header nav{
   float:right;
   margin-top:15px;
   margin-right:-100px;
+
 }
 
 header a{
@@ -62,12 +63,13 @@ header a{
 header li{
   float:left;
   display:inline;
-  padding: 0 15px 0 18px;
+  padding: 0 15px 0 30px;
 }
 
 header a:hover{
   color:#cccccc;
 }
+
 
 /* Showcase */
 #showcase{
@@ -83,11 +85,10 @@ header a:hover{
 
 /* intro_image */
 #intro_image{
-  margin-left:71%;
-  margin-top:-27%;
+  position: absolute;
+  top: 25%; bottom:0px; left: 67%; right:0;
+  margin: auto;
 }
-
-
 
 #intro_image .box{
   float:right;
@@ -96,27 +97,12 @@ header a:hover{
 #intro_image .box img{
 }
 
-/* The bottom border */
-#bottom_border{
-  margin-top:30px;
-  padding:30px;
-  background:#35424a;
-  border-top:#00bd75 3px solid;
-  border-bottom:#00bd75 3px solid;
-}
-
-#container {
-   height:100%;
-}
-
 footer {
   margin-top:30px;
   padding:30px;
   background:#35424a;
   border-top:#00bd75 3px solid;
   border-bottom:#00bd75 3px solid;
-  width: 100%;
   bottom: 0;
   position: relative;
-
 }
