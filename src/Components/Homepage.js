@@ -17,8 +17,11 @@ class HomePage extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
         <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
         <Header/>
-        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 30}}>
+        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 20}}>
           <LeftInfo/>
+        </Grid>
+        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 20}}>
+          <RightInfo/>
         </Grid>
       </Grid>
     );
@@ -97,6 +100,7 @@ class LeftInfo extends Component {
               <div style={{fontSize: 14, color: "#6B756D", fontFamily: "PT Sans"}}>
                 Welcome to my web page!
                 <br/>
+                <br/>
                 {"I'm a second year Computer Science student at the University of Toronto, and also co-founder of "}
                 <span style={{color: "#6069E6"}}>
                   {"Knowtworthy"}
@@ -127,30 +131,59 @@ class RightInfo extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12} >
         <Grid item xs={1} sm={2} md={2} lg={2} xl={2}/>
         <Grid container xs={10} sm={9} md={9} lg={9} xl={9}>
-          <Grid item  xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 20}}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
             <Typography variant="body2">
-              <div style={{fontSize: 14, color: "#6B756D", fontFamily: "PT Sans"}}>
-                Welcome to my web page!
-                <br/>
-                {"I'm a second year Computer Science student at the University of Toronto, and also co-founder of "}
-                <span style={{color: "#6069E6"}}>
-                  {"Knowtworthy"}
-                </span>
+              <div style={{fontSize: 14, color: "#6069E6", fontFamily: "PT Sans"}}>
+                BRIEF HISTORY
               </div>
             </Typography>
-          </Grid>
-          <Grid item  xs={12} sm={12} md={12} lg={12} xl={12}  style={{marginBottom: 15}}>
-            <img src={roboto} style={{width: 236, height: 225, ...borderStyles}} />
-          </Grid>
-          <Grid item  xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Typography variant="body2">
-              <div style={{fontSize: 14, color: "#6B756D", fontFamily: "PT Sans"}}>
-                {"I hope to always be learning and building, in the many fields that interest me!"}
-              </div>
-            </Typography>
+            <br/>
+            <HistoryBox
+              date={"November 2017 - Present"}
+              position={"Co-founder and Full Stack Developer"}
+              place={"Knowtworthy"}
+            />
+            <br/>
+            <HistoryBox
+              date={"January 2018 - April 2018"}
+              position={"Web Developer"}
+              place={"University of Toronto - Courseography"}
+            />
+            <br/>
+            <HistoryBox
+              date={"September 2017 - April 2021"}
+              position={"B.Sc. Computer Science Specialist; Mathematics Minor"}
+              place={"University of Toronto"}
+            />
+            <br/>
+            <HistoryBox
+              date={"January 2016 - August 2017"}
+              position={"Teaching Assistant"}
+              place={"Kumon Math & Reading Centre"}
+            />
           </Grid>
         </Grid>
         <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
+      </Grid>
+    );
+  }
+}
+
+class HistoryBox extends Component {
+  render() {
+    return (
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
+        <Typography variant="body2">
+          <div style={{fontSize: 14, color: "#49504A", fontFamily: "PT Sans"}}>
+            {this.props.date}
+          </div>
+          <div style={{fontSize: 14, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
+            {this.props.position}
+          </div>
+          <div style={{fontSize: 14, color: "#6069E6", fontFamily: "PT Sans"}}>
+            {this.props.place}
+          </div>
+        </Typography>
       </Grid>
     );
   }
