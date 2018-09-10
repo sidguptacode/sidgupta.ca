@@ -12,15 +12,37 @@ const borderStyles = {
 };
 
 class HomePage extends Component {
+  constructor(){
+    super();
+    this.state = {
+      skillsColor: "#6B756D",
+      courseworkColor: "#6B756D",
+      resumeColor: "#6B756D",
+      kwColor: "#6069E6"
+    }
+  }
+
+  onMouseEnter = (name) => {
+    var newColor = {};
+    newColor[name] = "#232B98";
+    this.setState(newColor);
+  }
+
+  onMouseLeave = (name) => {
+    var newColor = {};
+    newColor[name] = (name=="kwColor" ? "#6069E6" : "#6B756D");
+    this.setState(newColor);
+  }
+
   render() {
     return (
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
         <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
-        <Header/>
-        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 20}}>
-          <LeftInfo/>
+        <Header skillsColor={this.state.skillsColor} courseworkColor={this.state.courseworkColor} resumeColor={this.state.resumeColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
+        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 10}}>
+          <LeftInfo color={this.state.kwColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
         </Grid>
-        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 20}}>
+        <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 10}}>
           <RightInfo/>
         </Grid>
       </Grid>
@@ -61,23 +83,23 @@ class Header extends Component {
           <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
           {/* quick access buttons */}
           <Grid container xs={11} sm={11} md={5} lg={5} xl={5}>
-            <Grid item xs={12} sm={10} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: "#6B756D", fontFamily: "PT Sans"}}>
+                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor", "232B98")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}}>
                   Skills & Projects
                 </div>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={10} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: "#6B756D", fontFamily: "PT Sans"}}>
+                <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}>
                   Coursework
                 </div>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={10} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: "#6B756D", fontFamily: "PT Sans"}}>
+                <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}>
                   Resume
                 </div>
               </Typography>
@@ -102,7 +124,7 @@ class LeftInfo extends Component {
                 <br/>
                 <br/>
                 {"I'm a second year Computer Science student at the University of Toronto, and also co-founder of "}
-                <span style={{color: "#6069E6"}}>
+                <span style={{color: this.props.color}} onMouseEnter={() => {this.props.onMouseEnter("kwColor")}} onMouseLeave={() => {this.props.onMouseLeave("kwColor")}}>
                   {"Knowtworthy"}
                 </span>
               </div>
