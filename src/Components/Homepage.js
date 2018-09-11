@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import roboto from '../images/robotonew.png';
+import { Switch, Route, Router, Redirect } from 'react-router-dom'
+import DevpostGrey from '../svgs/DevpostGrey.svg';
+import DevpostBlue from '../svgs/DevpostBlue.svg';
+import LinkedinGrey from '../svgs/LinkedinGrey.svg';
+import LinkedinBlue from '../svgs/LinkedinBlue.svg';
+import GithubGrey from '../svgs/GithubGrey.svg';
+import GithubBlack from '../svgs/GithubBlack.svg';
+import IconButton from '@material-ui/core/IconButton';
 
 const borderStyles = {
   borderColor: '#e8e8e8',
@@ -22,21 +30,21 @@ class HomePage extends Component {
     }
   }
 
-  onMouseEnter = (name) => {
+  onMouseEnter = (name, color="#232B98") => {
     var newColor = {};
-    newColor[name] = "#232B98";
+    newColor[name] = color;
     this.setState(newColor);
   }
 
-  onMouseLeave = (name) => {
+  onMouseLeave = (name, color="#6B756D") => {
     var newColor = {};
-    newColor[name] = (name=="kwColor" ? "#6069E6" : "#6B756D");
+    newColor[name] = color;
     this.setState(newColor);
   }
 
   render() {
     return (
-      <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 30}}>
         <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
         <Header skillsColor={this.state.skillsColor} courseworkColor={this.state.courseworkColor} resumeColor={this.state.resumeColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
         <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 10}}>
@@ -52,6 +60,16 @@ class HomePage extends Component {
 
 
 class Header extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      hoverGit: false,
+      hoverIn: false,
+      hoverDev: false
+    };
+  }
+
   render() {
     return (
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -70,36 +88,52 @@ class Header extends Component {
         {/* headlines */}
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
           <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
-          <Grid item xs={10} sm={10} md={3} lg={3} xl={3}>
+          <Grid item xs={10} sm={10} md={2} lg={2} xl={2}>
             <Typography variant="display3">
               <div style={{fontSize: 24, color: "#6B756D", fontFamily: "PT Sans"}}>
                 Full-stack developer
               </div>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+          <Grid container xs={12} sm={12} md={2} lg={2} xl={2} style={{marginTop: 25}}>
             {/* logos */}
+            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+            <Grid item xs={2} sm={1} md={3} lg={3} xl={3} style={{marginTop: 1}}>
+              <IconButton style={{height: 25, width: 25}}>
+                <img src={(this.state.hoverDev ? DevpostBlue : DevpostGrey)} style={{height: 25, width: 25}} onMouseEnter={() => {this.setState({hoverDev: true})}} onMouseLeave={() => {this.setState({hoverDev: false})}}/>
+              </IconButton>
+            </Grid>
+            <Grid item xs={2} sm={1} md={3} lg={3} xl={3}>
+              <IconButton style={{height: 25, width: 25}}>
+                <img src={(this.state.hoverIn ? LinkedinBlue : LinkedinGrey)} style={{height: 25, width: 25}}  onMouseEnter={() => {this.setState({hoverIn: true})}} onMouseLeave={() => {this.setState({hoverIn: false})}}/>
+              </IconButton>
+            </Grid>
+            <Grid item xs={2} sm={1} md={3} lg={3} xl={3}>
+              <IconButton style={{height: 25, width: 25}}>
+                <img src={(this.state.hoverGit ? GithubBlack : GithubGrey)}  style={{height: 25, width: 25}} onMouseEnter={() => {this.setState({hoverGit: true})}} onMouseLeave={() => {this.setState({hoverGit: false})}}/>
+              </IconButton>
+            </Grid>
           </Grid>
-          <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
+          <Grid item xs={1} sm={1} md={2} lg={2} xl={2}/>
           {/* quick access buttons */}
           <Grid container xs={11} sm={11} md={5} lg={5} xl={5}>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor", "232B98")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}}>
+                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}} onClick={() => {console.log("asdf")}}>
                   Skills & Projects
                 </div>
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}>
+                <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}  onClick={() => {}}>
                   Coursework
                 </div>
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}>
+                <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}  onClick={() => {}}>
                   Resume
                 </div>
               </Typography>
@@ -112,7 +146,22 @@ class Header extends Component {
 }
 
 class LeftInfo extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      directToKW: false
+    }
+  }
+
+
   render() {
+    if(this.state.directToKW){
+      return(
+        () => window.location = 'https://knowtworthy.com/'
+      );
+    }
+
     return (
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12} >
         <Grid item xs={1} sm={2} md={2} lg={2} xl={2}/>
@@ -124,8 +173,10 @@ class LeftInfo extends Component {
                 <br/>
                 <br/>
                 {"I'm a second year Computer Science student at the University of Toronto, and also co-founder of "}
-                <span style={{color: this.props.color}} onMouseEnter={() => {this.props.onMouseEnter("kwColor")}} onMouseLeave={() => {this.props.onMouseLeave("kwColor")}}>
+                <span onMouseEnter={() => {this.props.onMouseEnter("kwColor")}} onMouseLeave={() => {this.props.onMouseLeave("kwColor", "#6069E6")}} >
+                  <a href={'https://knowtworthy.com/'} style={{color: this.props.color}} >
                   {"Knowtworthy"}
+                  </a>
                 </span>
               </div>
             </Typography>
