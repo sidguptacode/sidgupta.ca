@@ -91,7 +91,7 @@ class Header extends Component {
           <Grid item xs={10} sm={10} md={2} lg={2} xl={2}>
             <Typography variant="display3">
               <div style={{fontSize: 24, color: "#6B756D", fontFamily: "PT Sans"}}>
-                Full-stack developer
+                Software Developer
               </div>
             </Typography>
           </Grid>
@@ -175,9 +175,10 @@ class LeftInfo extends Component {
                 {"I'm a second year Computer Science student at the University of Toronto, and also co-founder of "}
                 <span onMouseEnter={() => {this.props.onMouseEnter("kwColor")}} onMouseLeave={() => {this.props.onMouseLeave("kwColor", "#6069E6")}} >
                   <a href={'https://knowtworthy.com/'} style={{color: this.props.color}} >
-                  {"Knowtworthy"}
+                  {"Knowtworthy:"}
                   </a>
                 </span>
+                {" a web-based meetings productivity tool."}
               </div>
             </Typography>
           </Grid>
