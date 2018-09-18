@@ -54,10 +54,35 @@ class ProjectsPage extends Component {
             <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
             <Grid container xs={10} sm={10} md={10} lg={10} xl={10} >
+              <Header />
               <LanguagesBox selectedTools={this.state.selectedTools} addSelectedTool={this.addSelectedTool} removeSelectedTool={this.removeSelectedTool}/>
+              <Skills selectedTools={this.state.selectedTools} addSelectedTool={this.addSelectedTool} removeSelectedTool={this.removeSelectedTool} />
             </Grid>
           </MuiThemeProvider>
         </Grid>
+    );
+  }
+}
+
+class Header extends Component {
+  render(){
+    return(
+      <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: -15}}>
+        <Grid item xs={12} sm={12} md={2} lg={1} xl={2}>
+          <Typography variant="display3">
+            <div style={{fontSize: 24, color: "#232B98", fontFamily: "PT Sans"}}>
+              Skills:
+            </div>
+          </Typography>
+        </Grid>
+        <Grid item xs={10} sm={10} md={10} lg={10} xl={10} >
+          <Typography variant="display3">
+            <div style={{fontSize: 18, color: "#232B98", fontFamily: "PT Sans"}}>
+              (Click to highlight associated projects)
+            </div>
+          </Typography>
+        </Grid>
+      </Grid>
     );
   }
 }
@@ -139,21 +164,18 @@ class Skills extends Component {
   }
 
   render() {
-    if(this.props.selectedTools == null){
-      return <div/>
-    }
     return (
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
         <Grid container xs={12} sm={12} md={4} lg={4} xl={4} style={{textAlign: "center"}}>
-          <SkillSection name={"Front-end design"}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
+          <SkillSection name={"Front-end design"}  addSelectedTool={this.props.addSelectedTool}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
                         tools={['React', 'Redux', 'Material-ui', 'Bootstrap']}/>
         </Grid>
         <Grid container xs={12} sm={12} md={4} lg={4} xl={4} style={{textAlign: "center"}}>
-          <SkillSection name={"Back-end development"}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
+          <SkillSection name={"Back-end development"}  addSelectedTool={this.props.addSelectedTool}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
                         tools={['Node', 'Websocket', 'ShareDB', 'Express', "Socket.io", "Mongodb"]} />
         </Grid>
         <Grid container xs={12} sm={12} md={4} lg={4} xl={4} style={{textAlign: "center"}}>
-          <SkillSection name={"Tools and App development"}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
+          <SkillSection name={"Tools and App development"}  addSelectedTool={this.props.addSelectedTool}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
                         tools={['Git', 'LibGDX', 'Flask']} />
         </Grid>
       </Grid>
@@ -168,6 +190,7 @@ class SkillSection extends Component{
   }
 
   render(){
+
     return(
       <Grid container  xs={12} sm={12} md={4} lg={12} xl={12} style={{textAlign: "center"}}>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}  >
@@ -186,14 +209,18 @@ class SkillSection extends Component{
         </Grid>
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
         <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
-        <Grid item xs={5} sm={5} md={5} lg={5} xl={5}>
-          {this.props.tools.slice(0, Math.floor(this.props.tools.length / 2)).map((tool) =>
-            <SkillButton skill={tool} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
+        <Grid container xs={5} sm={5} md={5} lg={5} xl={5}>
+          {this.props.tools.slice(0, Math.ceil(this.props.tools.length / 2)).map((tool) =>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} style={{marginTop: 10}}>
+              <SkillButton skill={tool} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
+            </Grid>
           )}
         </Grid>
         <Grid item xs={5} sm={5} md={5} lg={5} xl={5}>
-          {this.props.tools.slice(4, this.props.tools.length).map((tool) =>
-            <SkillButton skill={tool} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
+          {this.props.tools.slice(Math.ceil(this.props.tools.length / 2), this.props.tools.length).map((tool) =>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} style={{marginTop: 10}}>
+              <SkillButton skill={tool} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
+            </Grid>
           )}
         </Grid>
         <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
