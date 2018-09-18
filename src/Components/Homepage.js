@@ -101,17 +101,23 @@ class Header extends Component {
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
             <Grid item xs={2} sm={1} md={3} lg={3} xl={3} style={{marginTop: 1}}>
               <IconButton style={{height: 25, width: 25}}>
-                <img src={(this.state.hoverDev ? DevpostBlue : DevpostGrey)} style={{height: 25, width: 25}} onMouseEnter={() => {this.setState({hoverDev: true})}} onMouseLeave={() => {this.setState({hoverDev: false})}}/>
+                <a href={'https://devpost.com/sid1999'} >
+                  <img src={(this.state.hoverDev ? DevpostBlue : DevpostGrey)} style={{height: 25, width: 25}} onMouseEnter={() => {this.setState({hoverDev: true})}} onMouseLeave={() => {this.setState({hoverDev: false})}}/>
+                </a>
               </IconButton>
             </Grid>
             <Grid item xs={2} sm={1} md={3} lg={3} xl={3}>
               <IconButton style={{height: 25, width: 25}}>
-                <img src={(this.state.hoverIn ? LinkedinBlue : LinkedinGrey)} style={{height: 25, width: 25}}  onMouseEnter={() => {this.setState({hoverIn: true})}} onMouseLeave={() => {this.setState({hoverIn: false})}}/>
+                <a href={'https://www.linkedin.com/in/sidgupta-99/'} >
+                  <img src={(this.state.hoverIn ? LinkedinBlue : LinkedinGrey)} style={{height: 25, width: 25}}  onMouseEnter={() => {this.setState({hoverIn: true})}} onMouseLeave={() => {this.setState({hoverIn: false})}}/>
+                </a>
               </IconButton>
             </Grid>
             <Grid item xs={2} sm={1} md={3} lg={3} xl={3}>
               <IconButton style={{height: 25, width: 25}}>
+              <a href={'https://github.com/gupta-sid'} >
                 <img src={(this.state.hoverGit ? GithubBlack : GithubGrey)}  style={{height: 25, width: 25}} onMouseEnter={() => {this.setState({hoverGit: true})}} onMouseLeave={() => {this.setState({hoverGit: false})}}/>
+              </a>
               </IconButton>
             </Grid>
           </Grid>
@@ -121,21 +127,21 @@ class Header extends Component {
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
                 <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}} onClick={() => {console.log("asdf")}}>
-                  Skills & Projects
+                  {/*Skills & Projects*/}
                 </div>
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
               <Typography variant="display3">
                 <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}  onClick={() => {}}>
-                  Coursework
+                  {/*Coursework*/}
                 </div>
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
                 <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}  onClick={() => {}}>
-                  Resume
+                  {/*Resume*/}
                 </div>
               </Typography>
             </Grid>
@@ -167,7 +173,7 @@ class LeftInfo extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12} >
         <Grid item xs={1} sm={2} md={2} lg={2} xl={2}/>
         <Grid container xs={10} sm={9} md={9} lg={9} xl={9}>
-          <Grid item  xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 20}}>
+          <Grid item  xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 20, marginTop: (isMobile ? 20 : 0)}}>
             <Typography variant="body2">
               <div style={{fontSize: 14, color: "#6B756D", fontFamily: "PT Sans"}}>
                 Welcome to my web page!
