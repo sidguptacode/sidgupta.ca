@@ -6,6 +6,7 @@ import { Switch, Route, Router, Redirect } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from  '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
+import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 
 const theme = createMuiTheme({
   palette: {
@@ -106,20 +107,21 @@ class LanguagesBox extends Component {
             </div>
           </Typography>
         </Grid>
-        <Grid container xs={10} sm={10} md={10} lg={10} xl={10} style={{marginTop: 23}}>
-          <Grid item xs={1} sm={1} md={1} lg={2} xl={1} >
+        <Grid container xs={12} sm={10} md={10} lg={10} xl={10} style={{marginTop: 23}}>
+          <Grid item xs={4} sm={4} md={2} lg={2} xl={2} >
             <SkillButton skill={"JavaScript"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool}  removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={1} sm={1} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
             <SkillButton skill={"Java"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={1} sm={1} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
             <SkillButton skill={"Python"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={1} sm={1} md={1} lg={2} xl={1} >
+          {isMobile ? <div style={{marginTop: 15}}/> : <div/>}
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
             <SkillButton skill={"HTML"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={1} sm={1} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
             <SkillButton skill={"CSS"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
           <Grid item lg={12}>
