@@ -10,6 +10,7 @@ import LinkedinBlue from '../svgs/LinkedinBlue.svg';
 import GithubGrey from '../svgs/GithubGrey.svg';
 import GithubBlack from '../svgs/GithubBlack.svg';
 import IconButton from '@material-ui/core/IconButton';
+import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 
 const borderStyles = {
   borderColor: '#e8e8e8',
@@ -119,14 +120,14 @@ class Header extends Component {
           <Grid container xs={11} sm={11} md={5} lg={5} xl={5}>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}} onClick={() => {console.log("asdf")}}>
+                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}} onClick={() => {console.log("asdf")}}>
                   Skills & Projects
                 </div>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}  onClick={() => {}}>
+                <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}  onClick={() => {}}>
                   Coursework
                 </div>
               </Typography>

@@ -55,7 +55,7 @@ class SkillsPage extends Component {
             <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
             <Grid container xs={10} sm={10} md={10} lg={10} xl={10} >
-              <Header />
+              {/*<Header />*/}
               <LanguagesBox selectedTools={this.state.selectedTools} addSelectedTool={this.addSelectedTool} removeSelectedTool={this.removeSelectedTool}/>
               <Skills selectedTools={this.state.selectedTools} addSelectedTool={this.addSelectedTool} removeSelectedTool={this.removeSelectedTool} />
             </Grid>
@@ -79,7 +79,7 @@ class Header extends Component {
         <Grid item xs={10} sm={10} md={10} lg={10} xl={10} >
           <Typography variant="display3">
             <div style={{fontSize: 18, color: "#232B98", fontFamily: "PT Sans"}}>
-              (Click to highlight associated projects)
+              {/*(Click to highlight associated projects)*/}
             </div>
           </Typography>
         </Grid>
@@ -108,20 +108,19 @@ class LanguagesBox extends Component {
           </Typography>
         </Grid>
         <Grid container xs={12} sm={10} md={10} lg={10} xl={10} style={{marginTop: 23}}>
-          <Grid item xs={4} sm={4} md={2} lg={2} xl={2} >
+          <Grid item xs={4} sm={4} md={2} lg={2} xl={2} style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"JavaScript"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool}  removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"Java"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1}  style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"Python"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          {isMobile ? <div style={{marginTop: 15}}/> : <div/>}
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} style={{marginBottom: (isMobile ? 15 : 0)}}  >
             <SkillButton skill={"HTML"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} >
+          <Grid item xs={4} sm={4} md={1} lg={2} xl={1}  style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"CSS"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
           <Grid item lg={12}>
@@ -144,8 +143,8 @@ class SkillButton extends Component {
 
   render(){
     return(
-      <Button variant={this.isSelected() ? "contained" : "outlined"} color="primary"
-              style={{width: 100, height: 10, fontSize: 12}} labelStyle={{height: 20}} size="small" mini
+      <Button disabled={true} variant={this.isSelected() ? "contained" : "outlined"} color="primary"
+              style={{width: 100, height: 10, fontSize: 12, color: "#232B98"}} labelStyle={{height: 20}} size="small" mini
               onClick={() => {
                 if(this.isSelected()){
                   this.props.removeSelectedTool(this.props.skill);
