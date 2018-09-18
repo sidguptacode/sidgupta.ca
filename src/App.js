@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import HomePage from './Components/Homepage'
-import ProjectsPage from './Components/Projectspage'
+import SkillsPage from './Components/SkillsPage'
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route, Router, Redirect } from 'react-router-dom'
 
@@ -24,7 +24,7 @@ class Main extends Component {
     return(
       <div>
         <HomePage/>
-        <ProjectsPage/>
+        <SkillsPage/>
       </div>
     );
   }

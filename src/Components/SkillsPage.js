@@ -21,7 +21,7 @@ const borderStyles = {
   backgroundColor: 'white'
 };
 
-class ProjectsPage extends Component {
+class SkillsPage extends Component {
 
   constructor(props){
     super(props);
@@ -169,6 +169,9 @@ class Skills extends Component {
         <Grid container xs={12} sm={12} md={4} lg={4} xl={4} style={{textAlign: "center"}}>
           <SkillSection name={"Front-end design"}  addSelectedTool={this.props.addSelectedTool}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
                         tools={['React', 'Redux', 'Material-ui', 'Bootstrap']}/>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} / >
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} / >
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} / >
         </Grid>
         <Grid container xs={12} sm={12} md={4} lg={4} xl={4} style={{textAlign: "center"}}>
           <SkillSection name={"Back-end development"}  addSelectedTool={this.props.addSelectedTool}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
@@ -177,6 +180,9 @@ class Skills extends Component {
         <Grid container xs={12} sm={12} md={4} lg={4} xl={4} style={{textAlign: "center"}}>
           <SkillSection name={"Tools and App development"}  addSelectedTool={this.props.addSelectedTool}  selectedTools={this.props.selectedTools} removeSelectedTool={this.props.removeSelectedTool}
                         tools={['Git', 'LibGDX', 'Flask']} />
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} / >
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} / >
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} / >
         </Grid>
       </Grid>
     );
@@ -200,7 +206,7 @@ class SkillSection extends Component{
             </div>
           </Typography>
         </Grid>
-        <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginTop: -15}}>
           <Grid item xs={2} sm={2} md={2} lg={2} xl={2}/>
           <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
             <Divider width="100%"/>
@@ -233,4 +239,4 @@ class SkillSection extends Component{
 
 
 
-export default ProjectsPage;
+export default SkillsPage;
