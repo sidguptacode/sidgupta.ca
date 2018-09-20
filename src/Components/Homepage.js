@@ -11,6 +11,7 @@ import GithubGrey from '../svgs/GithubGrey.svg';
 import GithubBlack from '../svgs/GithubBlack.svg';
 import IconButton from '@material-ui/core/IconButton';
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+import Resume from '../Sid_Gupta_Resume.pdf'
 
 const borderStyles = {
   borderColor: '#e8e8e8',
@@ -126,9 +127,11 @@ class Header extends Component {
           <Grid container xs={11} sm={11} md={5} lg={5} xl={5}>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("skillsColor")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}} onClick={() => {console.log("asdf")}}>
-                  {/*Skills & Projects*/}
+                <a href={Resume} style={{textDecoration: 'none' }}>
+                <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans", textDecoration: 'none' }} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}  onClick={() => {}}>
+                    {"Resume"}
                 </div>
+                </a>
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
@@ -140,9 +143,7 @@ class Header extends Component {
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans"}} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}  onClick={() => {}}>
-                  {/*Resume*/}
-                </div>
+
               </Typography>
             </Grid>
           </Grid>
