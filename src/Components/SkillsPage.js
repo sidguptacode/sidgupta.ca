@@ -29,6 +29,11 @@ class SkillsPage extends Component {
     this.state = {
       selectedTools: []
     }
+    this.skillsRef = React.createRef();
+  }
+
+  componentDidMount = () => {
+    this.props.setSkillsRef(this.skillsRef.current);
   }
 
   addSelectedTool = (tool) => {
@@ -50,12 +55,13 @@ class SkillsPage extends Component {
 
   render() {
     return (
-        <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{backgroundColor: "#F7F4F4"}}>
+        <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{backgroundColor: "#F7F4F4"}} ref={this.skillsRef}>
           <MuiThemeProvider theme={theme}>
             <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} style={{marginTop: 30}} />
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
             <Grid container xs={10} sm={10} md={10} lg={10} xl={10} >
-              {/*<Header />*/}
+              {/*<Header /> */}
               <LanguagesBox selectedTools={this.state.selectedTools} addSelectedTool={this.addSelectedTool} removeSelectedTool={this.removeSelectedTool}/>
               <Skills selectedTools={this.state.selectedTools} addSelectedTool={this.addSelectedTool} removeSelectedTool={this.removeSelectedTool} />
             </Grid>
@@ -79,7 +85,7 @@ class Header extends Component {
         <Grid item xs={10} sm={10} md={10} lg={10} xl={10} >
           <Typography variant="display3">
             <div style={{fontSize: 18, color: "#232B98", fontFamily: "PT Sans"}}>
-              {/*(Click to highlight associated projects)*/}
+              {"(Click to highlight associated projects)"}
             </div>
           </Typography>
         </Grid>
@@ -111,16 +117,16 @@ class LanguagesBox extends Component {
           <Grid item xs={4} sm={4} md={2} lg={2} xl={2} style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"JavaScript"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool}  removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} style={{marginBottom: (isMobile ? 15 : 0)}} >
+          <Grid item xs={4} sm={4} md={2} lg={2} xl={2} style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"Java"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1}  style={{marginBottom: (isMobile ? 15 : 0)}} >
+          <Grid item xs={4} sm={4} md={2} lg={2} xl={2}  style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"Python"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1} style={{marginBottom: (isMobile ? 15 : 0)}}  >
+          <Grid item xs={4} sm={4} md={2} lg={2} xl={2} style={{marginBottom: (isMobile ? 15 : 0)}}  >
             <SkillButton skill={"HTML"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
-          <Grid item xs={4} sm={4} md={1} lg={2} xl={1}  style={{marginBottom: (isMobile ? 15 : 0)}} >
+          <Grid item xs={4} sm={4} md={2} lg={2} xl={2}  style={{marginBottom: (isMobile ? 15 : 0)}} >
             <SkillButton skill={"CSS"} selectedTools={this.props.selectedTools} addSelectedTool={this.props.addSelectedTool} removeSelectedTool={this.props.removeSelectedTool} />
           </Grid>
           <Grid item lg={12}>
@@ -199,7 +205,7 @@ class SkillSection extends Component{
   render(){
 
     return(
-      <Grid container  xs={12} sm={12} md={4} lg={12} xl={12} style={{textAlign: "center"}}>
+      <Grid container  xs={12} sm={12} md={12} lg={12} xl={12} style={{textAlign: "center"}}>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}  >
           <Typography variant="display3">
             <div style={{fontSize: 18, color: "#232B98", fontFamily: "PT Sans"}}>

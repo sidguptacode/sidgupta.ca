@@ -48,7 +48,7 @@ class HomePage extends Component {
     return (
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 30}}>
         <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
-        <Header skillsColor={this.state.skillsColor} courseworkColor={this.state.courseworkColor} resumeColor={this.state.resumeColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
+        <Header scrollDown={this.props.scrollDown} skillsColor={this.state.skillsColor} courseworkColor={this.state.courseworkColor} resumeColor={this.state.resumeColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
         <Grid container  xs={12} sm={6} md={6} lg={6} xl={6} style={{marginTop: 10}}>
           <LeftInfo color={this.state.kwColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
         </Grid>
@@ -124,29 +124,39 @@ class Header extends Component {
           </Grid>
           <Grid item xs={1} sm={1} md={2} lg={2} xl={2}/>
           {/* quick access buttons */}
-          <Grid container xs={11} sm={11} md={5} lg={5} xl={5}>
+          <Grid container xs={11} sm={11} md={5} lg={4} xl={5}>
             <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
               <Typography variant="display3">
-                <a href={Resume} style={{textDecoration: 'none' }}>
-                <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans", textDecoration: 'none' }} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}  onClick={() => {}}>
-                    {"Resume"}
-                </div>
-                </a>
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
-              <Typography variant="display3">
-                <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}  onClick={() => {}}>
-                  {/*Coursework*/}
+                <div style={{fontSize: 18, color: this.props.skillsColor, fontFamily: "PT Sans", textDecoration: 'none' }} onMouseEnter={() => {this.props.onMouseEnter("skillsColor")}} onMouseLeave={() => {this.props.onMouseLeave("skillsColor")}}  onClick={() => {this.props.scrollDown("skillsRef")}}>
+                    {"Skills and Projects"}
                 </div>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
-              <Typography variant="display3">
-
-              </Typography>
+            <Grid container xs={12} sm={4} md={4} lg={4} xl={4} >
+              <Grid item xs={0} sm={0} md={6} lg={6} xl={6}/>
+              <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                <Typography variant="display3">
+                  <div style={{fontSize: 18, color: this.props.courseworkColor, fontFamily: "PT Sans", marginBottom: (isMobile) ? -25 : 0}} onMouseEnter={() => {this.props.onMouseEnter("courseworkColor")}} onMouseLeave={() => {this.props.onMouseLeave("courseworkColor")}}
+                    onClick={() => {this.props.scrollDown("coursesRef")}}>
+                    {"Coursework"}
+                  </div>
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid container xs={12} sm={4} md={4} lg={4} xl={4}>
+              <Grid item xs={0} sm={0} md={8} lg={8} xl={8}/>
+              <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Typography variant="display3">
+                  <a href={Resume}>
+                    <div style={{fontSize: 18, color: this.props.resumeColor, fontFamily: "PT Sans", textDecoration: 'none' }} onMouseEnter={() => {this.props.onMouseEnter("resumeColor")}} onMouseLeave={() => {this.props.onMouseLeave("resumeColor")}}  onClick={() => {}}>
+                        {"Resume"}
+                    </div>
+                  </a>
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
+          <Grid item xs={1} sm={1} md={2} lg={2} xl={2}/>
         </Grid>
       </Grid>
     );
@@ -234,7 +244,7 @@ class RightInfo extends Component {
             <br/>
             <HistoryBox
               date={"September 2017 - April 2021"}
-              position={"B.Sc. Computer Science Specialist; Mathematics Minor"}
+              position={"edu"}
               place={"University of Toronto"}
             />
             <br/>
@@ -260,7 +270,21 @@ class HistoryBox extends Component {
             {this.props.date}
           </div>
           <div style={{fontSize: 14, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
-            {this.props.position}
+            {this.props.position == "edu" ?
+            <div >
+              <div>
+                {"Bachelor's Degree of Science"}
+              </div>
+              <div>
+                {"Double Major: Computer Science (A.I Specialist) & Cognitive Science;"}
+              </div>
+              <div>
+                {"Minor in Mathematics"}
+              </div>
+            </div>
+            :
+            this.props.position
+            }
           </div>
           <div style={{fontSize: 14, color: "#6069E6", fontFamily: "PT Sans"}}>
             {this.props.place}
