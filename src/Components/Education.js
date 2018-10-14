@@ -72,10 +72,12 @@ class Header extends Component {
               {
                 <div>
                   <div>
-                    {"Double Major: Computer Science (A.I Specialist) and Cognitive Science"}
+                    {"University of Toronto B.Sc."}
                   </div>
                   <div>
-                    {"Mathematics Minor"}
+                    {"Double Major: Computer Science (A.I Specialist) and Cognitive Science; Mathematics Minor "}
+                  </div>
+                  <div>
                   </div>
                 </div>
               }
