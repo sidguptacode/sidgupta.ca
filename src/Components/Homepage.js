@@ -238,7 +238,7 @@ class RightInfo extends Component {
             <br/>
             <HistoryBox
               date={"January 2018 - April 2018"}
-              position={"Web Developer"}
+              position={"Volunteer Web Developer"}
               place={"University of Toronto - Courseography"}
             />
             <br/>

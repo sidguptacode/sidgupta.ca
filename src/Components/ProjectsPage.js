@@ -9,6 +9,8 @@ import Divider from '@material-ui/core/Divider';
 import OrionData from '../images/Orion_Data_DP.png';
 import Knowtworthy from '../images/Knowtworthy_DP.PNG';
 import Sentiment from '../images/Sentiment_DP.png';
+import OtherProjects from '../images/Other_Projects_DP.png';
+
 
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 
@@ -169,6 +171,40 @@ class Projects extends Component {
                 <span>
                   <a href={'https://github.com/gupta-sid/Orion-Data'} style={{color: "#6069E6"}} >
                   {"Github Repository"}
+                  </a>
+                </span>
+              </div>
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} style={{marginTop: 60}}/>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6} style={{marginTop: 30}}>
+          <img src={OtherProjects} style={{width: (isMobile ? 300 : 500), height: (isMobile ? 169 : 281), ...borderStyles}} />
+        </Grid>
+        {isMobile ? <div/> : <Grid item xs={0} sm={12} md={1} lg={1} xl={1}/>}
+        <Grid container xs={12} sm={12} md={5} lg={5} xl={5}>
+          <Grid item  xs={12} sm={12} md={12} lg={12} xl={12} style={{marginTop: (isMobile ? 0 : 0)}} >
+            <Typography variant="display3">
+              <div style={{fontSize: 24, color: "#232B98", fontFamily: "PT Sans"}}>
+                Hackathons, Games, and many more
+              </div>
+            </Typography>
+            <Typography variant="body2">
+              <div style={{fontSize: 14, color: "#6B756D", fontFamily: "PT Sans"}}>
+                {"Be it hackathon, prototype, or long term project, I'm always excited to build cool, innovative ideas using code."}
+                <br/>
+                {"I've built 25+ software projects across 3+ years of coding, with many more to come!"}
+                <br/>
+                <br/>
+                <span>
+                  <a href={'https://www.youtube.com/watch?v=9DR7a-3mZPk&list=PLQt0f5nIHYhZYocbkFOjllZ-wASq9jwm9'} style={{color: "#6069E6"}} >
+                  {"Video playlist of project demos"}
+                  </a>
+                </span>
+                <br/>
+                <span>
+                  <a href={'https://github.com/gupta-sid'} style={{color: "#6069E6"}} >
+                  {"Github repositories"}
                   </a>
                 </span>
               </div>
