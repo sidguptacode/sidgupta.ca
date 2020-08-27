@@ -75,7 +75,7 @@ class Header extends Component {
                     {"University of Toronto B.Sc."}
                   </div>
                   <div>
-                    {"Double Major: Computer Science (A.I Specialist) and Cognitive Science; Mathematics Minor "}
+                    {"Computer Science specialist, Math minor "}
                   </div>
                   <div>
                   </div>
@@ -85,7 +85,7 @@ class Header extends Component {
           </Typography>
           <Typography variant="body2">
             <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans"}}>
-              <span style={{ fontWeight: "bold"}}>{"3.6 / 4.0 GPA "}</span>{"in MAT/CSC courses"}
+              <span >{"Major GPA: "}</span><span style={{ fontWeight: "bold"}}>{"3.5 (A-)"} </span>
             </div>
           </Typography>
         </Grid>
@@ -104,19 +104,19 @@ class CourseList extends Component {
 
   render() {
     return (
-      <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
-        <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 40, marginTop: 40}}>
+      <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 40, marginTop: 40}}>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6}  style={{marginBottom: 40}}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Typography variant="body2">
               <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
-                {"Fall 2018"}
+                {"Fall 2017"}
               </div>
             </Typography>
           </Grid>
-          <CourseSet semester={["MAT237 - Multivariable Calculus (year long course)", "MAT240 - Algebra I", "STA257 - Probability and Statistics I", "CSC207 - Software Design",
-          "PSY270 - Introduction to Cognitive Psychology", "COG260 - Data, Computation, and the Mind" ]} />
+          <CourseSet semester={["MAT137 - Calculus (year long course)", "CSC148 - Introduction to Computer Science", "CSC165 - Mathematical Expression and Reasoning for Computer Science", "LTE199 - Living things and their Environment",
+          "COG250 - Introduction to Cognitive Science (year long course)" ]} />
         </Grid>
-        <Grid container xs={12} sm={12} md={12} lg={12} xl={12}  style={{marginBottom: 40}}>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6}  style={{marginBottom: 40}}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Typography variant="body2">
               <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
@@ -127,7 +127,40 @@ class CourseList extends Component {
           <CourseSet semester={["MAT137 - Calculus (year long course)", "CSC258 - Computer Organization", "CSC240 - Enriched Introduction to Theory of Computation", "SII199 - Debating Environmental Issues",
           "COG250 - Introduction to Cognitive Science (year long course)" ]} />
         </Grid>
-        <Grid container xs={12} sm={12} md={12} lg={12} xl={12}  style={{marginBottom: 40}}>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6} >
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Typography variant="body2">
+              <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
+                {"Fall 2018"}
+              </div>
+            </Typography>
+          </Grid>
+          <CourseSet semester={["MAT237 - Multivariable Calculus (year long course)", "MAT240 - Linear algebra I", "STA257 - Statistics I", "CSC207 - Software Design",
+          "PSY270 - Introduction to Cognitive Psychology", "COG260 - Data, Computation, and the Mind" ]} />
+        </Grid>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6}  style={{marginBottom: 40}}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Typography variant="body2">
+              <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
+                {"Winter 2019"}
+              </div>
+            </Typography>
+          </Grid>
+          <CourseSet semester={["MAT237 - Multivariable Calculus (year long course)", "MAT224 - Linear algebra II", "STA248 - Statistics II", "CSC209 - Software Tools & System Programming",
+          "CSC263 - Data Structures Analysis" ]} />
+        </Grid>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6}  style={{marginBottom: 40}}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Typography variant="body2">
+              <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
+                {"Summer 2020"}
+              </div>
+            </Typography>
+          </Grid>
+          <CourseSet semester={["CSC373 - Algorithm Design, Analysis, & Complexity", "CSC369 - Operation Systems", "CSC420 - Introduction to Image Understanding", "CSC494 - Capstone research project (Smart Voice)",
+         ]} />
+        </Grid>
+        <Grid container xs={12} sm={12} md={6} lg={6} xl={6}  style={{marginBottom: 40}}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Typography variant="body2">
               <div style={{fontSize: 16, color: "#49504A", fontFamily: "PT Sans", fontWeight: "bold"}}>
@@ -135,8 +168,8 @@ class CourseList extends Component {
               </div>
             </Typography>
           </Grid>
-          <CourseSet semester={["MAT137 - Calculus (year long course)", "CSC148 - Introduction to Computer Science", "CSC165 - Mathematical Expression and Reasoning for Computer Science", "LTE199 - Living things and their Environment",
-          "COG250 - Introduction to Cognitive Science (year long course)" ]} />
+          <CourseSet semester={["CSC311 - Introduction to Machine Learning", "STA347 - Probability", "ECE568 - Computer Security", "CSC485 - Computational Linguistics",
+          "CSB201 - Introduction to Molecular Biology" ]} />
         </Grid>
       </Grid>
     );

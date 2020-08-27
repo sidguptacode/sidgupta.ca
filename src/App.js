@@ -45,9 +45,9 @@ class Main extends Component {
     return(
       <div>
         <HomePage scrollDown={(refType) => {this.scrollDown(this.state[refType]);}}/>
-        <SkillsPage setSkillsRef={(ref) => {this.setState({skillsRef: ref});}}/>
-        <ProjectsPage />
-        <EducationPage setCoursesRef={(ref) => {this.setState({coursesRef: ref});}} />
+        {/* <SkillsPage setSkillsRef={(ref) => {this.setState({skillsRef: ref});}}/> */}
+        {/* <ProjectsPage /> */}
+        {/* <EducationPage setCoursesRef={(ref) => {this.setState({coursesRef: ref});}} /> */}
       </div>
     );
   }
