@@ -88,7 +88,7 @@ class Description extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}/>
       <Grid item xs={6} sm={6} md={6} lg={6} xl={6}  style={{marginBottom: 15, marginTop: 50}}>
-        {"Hi, I'm Sid! I'm a third-year student at the University of Toronto, studying Computer Science & Math."}
+        {"Hi, I'm Sid! I'm a fourth-year student at the University of Toronto, studying Computer Science & Math."}
         <br/><br/>
         {"I'm interested in many areas of science, and the ways they can be connected. I'm currently working on some projects (with my very bright supervisors) that apply algorithms in psychology and speech therapy."}
         <br/><br/>
