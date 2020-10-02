@@ -133,13 +133,13 @@ class  Header extends Component {
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: -20, marginTop: 25}}>
           <Grid item xs={3} sm={3} md={4} lg={4} xl={4}/>
           <Grid item xs={6} sm={6} md={4} lg={4} xl={4}>
-            <a  href={Resume} style={{textDecoration: "none"}}>
+            {/* <a  href={Resume} style={{textDecoration: "none"}}> */}
             <Typography variant="display3">
               <div style={{textAlign: "center", fontSize: this.props.fontSize, color: "#232B98", fontFamily: "PT Sans"}}>
                 {this.props.text}
               </div>
             </Typography>
-            </a>
+            {/* </a> */}
           </Grid>
           <Grid item xs={3} sm={3} md={4} lg={4} xl={4}/>
         </Grid>
