@@ -91,7 +91,7 @@ class Description extends Component {
       <Grid item xs={6} sm={6} md={6} lg={6} xl={6}  style={{marginBottom: 15, marginTop: 50}}>
         {"Hi, I'm Sid! I'm a third-year (+PEY) student at the University of Toronto, studying Computer Science & Math."}
         <br/><br/>
-        {"I'm interested in many areas of science, and the ways they can be connected. I have worked on some projects that apply algorithms in psychology and speech therapy."}
+        {"I'm interested in many areas of science, and the ways they can be connected. I have worked on research projects spanning from computer vision, to algorithms in speech therapy."}
         <br/><br/>
         {"Feel free to reach out using the contacts below! I am pretty easy going and approachable 🙂"}
         <br/><br/>
