@@ -73,6 +73,7 @@ class HomePage extends Component {
                   </a>
                 </IconButton>
             </Grid>
+          <Header text="Resume" fontSize={24}/>
           </Grid>
           <Grid item xs={1} sm={1} md={4} lg={4} xl={4}/>
         </Grid>
@@ -88,9 +89,9 @@ class Description extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}/>
       <Grid item xs={6} sm={6} md={6} lg={6} xl={6}  style={{marginBottom: 15, marginTop: 50}}>
-        {"Hi, I'm Sid! I'm a fourth-year student at the University of Toronto, studying Computer Science & Math."}
+        {"Hi, I'm Sid! I'm a third-year (+PEY) student at the University of Toronto, studying Computer Science & Math."}
         <br/><br/>
-        {"I'm interested in many areas of science, and the ways they can be connected. I'm currently working on some projects (with my very bright supervisors) that apply algorithms in psychology and speech therapy."}
+        {"I'm interested in many areas of science, and the ways they can be connected. I have worked on some projects that apply algorithms in psychology and speech therapy."}
         <br/><br/>
         {"Feel free to reach out using the contacts below! I am pretty easy going and approachable 🙂"}
         <br/><br/>
@@ -129,17 +130,26 @@ class  Header extends Component {
   }
 
   render() {
+
     return (
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: -20, marginTop: 25}}>
           <Grid item xs={3} sm={3} md={4} lg={4} xl={4}/>
           <Grid item xs={6} sm={6} md={4} lg={4} xl={4}>
-            {/* <a  href={Resume} style={{textDecoration: "none"}}> */}
-            <Typography variant="display3">
-              <div style={{textAlign: "center", fontSize: this.props.fontSize, color: "#232B98", fontFamily: "PT Sans"}}>
-                {this.props.text}
-              </div>
-            </Typography>
-            {/* </a> */}
+            {this.props.text == "Resume" ?
+              <a  href={Resume} style={{textDecoration: "none"}}>
+                <Typography variant="display3">
+                  <div style={{textAlign: "center", fontSize: this.props.fontSize, fontWeight: this.state.hoverIn ? "bold" : "normal", color: this.state.hoverIn ? "#1a1433" : "#232B98", fontFamily: "PT Sans"}} onMouseEnter={() => this.setState({hoverIn: true})}  onMouseLeave={() => this.setState({hoverIn: false})}>
+                    {this.props.text}
+                  </div>
+                </Typography>
+              </a>
+              :
+              <Typography variant="display3">
+                <div style={{textAlign: "center", fontSize: this.props.fontSize, color: "#232B98", fontFamily: "PT Sans"}}>
+                  {this.props.text}
+                </div>
+             </Typography> 
+            }
           </Grid>
           <Grid item xs={3} sm={3} md={4} lg={4} xl={4}/>
         </Grid>
