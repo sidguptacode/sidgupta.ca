@@ -73,7 +73,7 @@ class HomePage extends Component {
                   </a>
                 </IconButton>
             </Grid>
-          <Header text="Resume" fontSize={24}/>
+          {/* <Header text="Resume" fontSize={24}/> */}
           </Grid>
           <Grid item xs={1} sm={1} md={4} lg={4} xl={4}/>
         </Grid>
