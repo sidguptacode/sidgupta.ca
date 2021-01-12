@@ -89,9 +89,9 @@ class Description extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}/>
       <Grid item xs={6} sm={6} md={6} lg={6} xl={6}  style={{marginBottom: 15, marginTop: 50}}>
-        {"Hi, I'm Sid! I'm a third-year (+PEY) student at the University of Toronto, studying Computer Science & Math."}
+        {"Hi, I'm Sid! I'm a fourth-year (+PEY) student at the University of Toronto, studying Computer Science & Math. My expected graduation date is May 2022."}
         <br/><br/>
-        {"I'm interested in many areas of science, and the ways they can be connected. I have worked on research projects spanning from computer vision, to algorithms in speech therapy."}
+        {"I am currently a part of several projects, ranging from machine learning, computer vision, and full-stack development. I'm also TA'ing CSC111 this semester."}
         <br/><br/>
         {"Feel free to reach out using the contacts below! I am pretty easy going and approachable 🙂"}
         <br/><br/>
