@@ -53,7 +53,7 @@ class HomePage extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{marginBottom: 30}}>
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{backgroundColor: "white"}}>
           <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins|Lato|Montserrat|Oswald|PT+Sans" rel="stylesheet"/>
-          <Header text="👋🏽 Hello!" fontSize={32} scrollDown={this.props.scrollDown} skillsColor={this.state.skillsColor} courseworkColor={this.state.courseworkColor} resumeColor={this.state.resumeColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
+          <Header text="Welcome!" fontSize={32} scrollDown={this.props.scrollDown} skillsColor={this.state.skillsColor} courseworkColor={this.state.courseworkColor} resumeColor={this.state.resumeColor} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
           <Photo/>
           <Description />
         </Grid>
@@ -89,11 +89,12 @@ class Description extends Component {
       <Grid container xs={12} sm={12} md={12} lg={12} xl={12}>
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}/>
       <Grid item xs={6} sm={6} md={6} lg={6} xl={6}  style={{marginBottom: 15, marginTop: 50}}>
-        {"Hi, I'm Sid! I'm a fourth-year (+PEY) student at the University of Toronto, studying Computer Science & Math. My expected graduation date is May 2022."}
+        {"Hello, my name is Sid. I'm a fourth-year student at the University of Toronto, studying Computer Science & Math. I'll be graduating in May 2022, and next semester I'll be applying for M.Sc and PhD programs."}
         <br/><br/>
-        {"I am currently a part of several projects, ranging from machine learning, computer vision, and full-stack development. I'm also TA'ing CSC111 this semester."}
+        {"As a researcher, I hope to be creating fair, interpretable machine learning models on all sorts of datasets (images, text, speech, motion, etc). I'm particularly interested"
+         + " in machine learning applications in healthcare. You can check out some of the work that I've done here!"}
         <br/><br/>
-        {"Feel free to reach out using the contacts below! I am pretty easy going and approachable 🙂"}
+        {"Also, feel free to reach out using the contacts below! I am pretty easy going and approachable. 🙂"}
         <br/><br/>
       </Grid>
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}/>
