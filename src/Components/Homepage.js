@@ -91,10 +91,15 @@ class Description extends Component {
       <Grid item xs={6} sm={6} md={6} lg={6} xl={6}  style={{marginBottom: 15, marginTop: 50}}>
         {"Hello, my name is Sid. I'm a fourth-year student at the University of Toronto, studying Computer Science & Math. I'll be graduating in May 2022, and next semester I'll be applying for M.Sc and PhD programs."}
         <br/><br/>
-        {"As a researcher, I hope to be creating fair, interpretable machine learning models on all sorts of datasets (images, text, speech, motion, etc). I'm particularly interested"
-         + " in machine learning applications in healthcare. You can check out some of the work that I've done here!"}
+        {"I've had the good fortune of doing research with "} 
+        <a href="https://mrezanejad.github.io/index.html">Morteza Rezanejad</a>
+        {" on various computer vision problems, and "}
+        <a href="https://mariakakis.github.io">Alex Mariakakis</a>
+        {" on machine learning problems in healthcare. "}
         <br/><br/>
-        {"Also, feel free to reach out using the contacts below! I am pretty easy going and approachable. 🙂"}
+        {"Before research, I spent some time working at Intel and Apple as a software engineering intern, and have also TA'd a few first year CS classes (CSC165/110/111)."}
+        <br/><br/>
+        {"I really enjoy teaching and learning from others. I think I am pretty easy going and approachable, so feel free to reach out using the contacts below 🙂"} 
         <br/><br/>
       </Grid>
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}/>
