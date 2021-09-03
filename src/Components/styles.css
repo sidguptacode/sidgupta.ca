@@ -1,0 +1,10 @@
+@media only screen and (min-width: 680px) {
+    .pageContainer {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        padding-left: 30px;
+        grid-template-rows: auto;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 2%;
+    }
+}
