@@ -3,6 +3,7 @@ import {
   isMobile
 } from "react-device-detect";
 import './styles.css';
+import { Link } from 'react-router-dom'
 import Resume from '../pdfs/Sid_Gupta_Resume.pdf'
 
 function Sidebar () {
@@ -12,15 +13,15 @@ function Sidebar () {
     const [hoverInResume, setHoverInResume] = useState(false);
     return (
       <div className="sidebar">
-        <a href="/" className='sidebarItem' onMouseEnter={() => setHoverInHome(true)} onMouseLeave={() => setHoverInHome(false)} style={{color: (!hoverInHome ? "#6069E6" : '#242F92')}}>
+        <Link to="/" className='sidebarItem' onMouseEnter={() => setHoverInHome(true)} onMouseLeave={() => setHoverInHome(false)} style={{color: (!hoverInHome ? "#6069E6" : '#242F92')}}>
           {"Sid Gupta"}
-        </a>
-        <a href="/projects" className='sidebarItem' onMouseEnter={() => setHoverInResearch(true)} onMouseLeave={() => setHoverInResearch(false)} style={{color: (!hoverInResearch ? "#6069E6" : '#242F92')}}>
+        </Link>
+        <Link to="/projects" className='sidebarItem' onMouseEnter={() => setHoverInResearch(true)} onMouseLeave={() => setHoverInResearch(false)} style={{color: (!hoverInResearch ? "#6069E6" : '#242F92')}}>
           {"AI Research & Projects"}
-        </a>
-        <a href="/courses" className='sidebarItem' onMouseEnter={() => setHoverInCourses(true)} onMouseLeave={() => setHoverInCourses(false)} style={{color: (!hoverInCourses ? "#6069E6" : '#242F92')}}>
+        </Link>
+        <Link to="/courses" className='sidebarItem' onMouseEnter={() => setHoverInCourses(true)} onMouseLeave={() => setHoverInCourses(false)} style={{color: (!hoverInCourses ? "#6069E6" : '#242F92')}}>
           {"Undergrad Courses"}
-        </a>
+        </Link>
         {/* <a href="google.com" className='sidebarItem' onMouseEnter={() => setHoverInCourses(true)} onMouseLeave={() => setHoverInCourses(false)} style={{color: (!hoverInCourses ? "#6069E6" : '#242F92')}}>
           {"Teaching & writing"}
         </a> */}
