@@ -39,13 +39,10 @@ function LeftInfo() {
         <div className="leftInfo" style={{verticalAlign: 'bottom'}}>
             {/* {"I hope to continue research in machine learning, interpretability, and computer vision for healthcare. To date, my research and projects encompass"} */}
             {/* {":"} */}
-            {"Here is a summary of my undergrad at the University of Toronto, where I completed a B.Sc in Computer Science with a focus in AI."}
+            {"I took lots of exciting courses in my undergrad and learned a lot. During school I didn't have any specific plan -- I just took courses that sounded interesting. But in hindsight, I realize that they all have shaped the way I see things now. "}
             <br/>
             <br/>
-            {"During school I didn't have any plan -- I just took courses that sounded interesting. But in hindsight, I realize that they all have shaped the way I see things now. "}
-            <br/>
-            <br/>
-            {"Disclaimer: This is not what a \"typical\" CS degree looks like. This is just mine, as someone who is interested in applied AI."}
+            {"Disclaimer: There is no such thing as a \"typical\" university degree. This is just mine. The best thing for any student to do is to take classes that are exciting to them (and not worry too much about the outcome)."}
             {/* <br/> */}
             {/* <br/> */}
             {/* {"Fun facts: I got a 61% and 67% in my first two years of statistics, and had to drop random processes after the midterm. However I kept at it and ultimately aced my ML and observational statistics classes. So don't give up on a bad grade :)"} */}

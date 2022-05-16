@@ -35,7 +35,7 @@ function HomePage () {
 function Description () {
     return (
         <div className="description">
-          {"My name is Sid, and I'm a recent Computer Science graduate from the University of Toronto. Starting July 2022, I will be working at PathAI in Boston MA, on AI systems for pathology."}
+          {"Hi! My name is Sid, and I'm a recent Computer Science graduate from the University of Toronto. Starting July 2022, I will be working at PathAI in Boston MA, on AI systems for pathology."}
           <br/><br/>
           {/* {"In my research I focus on machine learning, interpretability, and computer vision for healthcare. "} */}
           {/* {"I'm currently doing research with "}
