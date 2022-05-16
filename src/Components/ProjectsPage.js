@@ -34,22 +34,7 @@ class ProjectsPage extends Component {
     return (
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12} style={{backgroundColor: "#F7F4F4"}}>
           <MuiThemeProvider theme={theme}>
-            <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
-            <Grid container xs={10} sm={10} md={10} lg={10} xl={10} style={{marginTop: 40}}>
-              <Header text="Contact"/>
-              <div style={{textAlign:"center", height: 600}}>
-                {"LinkedIn | Email"}
-              </div>
-              {/* <Header text="About me"/>
-              <div style={{textAlign:"center"}}>
-                {"Resume | Projects | Teaching | Coursework "}
-              </div>
-              <Header text="Favourites"/>
-              <div style={{textAlign:"center"}}>
-                {"Youtuber: MKBHD | Video game: Hollow Knight | Book: 11/22/63 | Movie: Nightcrawler "}
-              </div> */}
-            </Grid>
-            <Grid item xs={1} sm={1} md={1} lg={1} xl={1}/>
+              <Projects/>
           </MuiThemeProvider>
         </Grid>
     );

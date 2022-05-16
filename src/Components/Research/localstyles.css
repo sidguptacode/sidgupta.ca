@@ -1,0 +1,49 @@
+.menuArea {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2%;
+    margin-bottom: 50px;
+}
+
+.leftInfo {
+    text-align: left;
+}
+
+.leftInfoList {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.photoproj {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    vertical-align:bottom;
+    margin-top: 5%;
+}
+
+.publication-pic:hover .photoproj {
+opacity: 0.5;
+}
+
+.publication-pic:hover .imgDescription {
+opacity: 1;
+}
+
+.menuAreaProjects {
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.materials {
+    margin-top: 5px;
+}
+
+.footer {
+    margin-top: 60px;
+}
