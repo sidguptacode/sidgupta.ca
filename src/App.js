@@ -13,8 +13,7 @@ function App () {
         <main>
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/projects' component={Research}/>
-          <Route exact path='/information' component={Information}/>
-          <Route exact path='/Courses' component={Courses}/>
+          <Route exact path='/courses' component={Courses}/>
         </main>
       </Switch>
     </BrowserRouter>
