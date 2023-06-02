@@ -85,3 +85,7 @@ hr {
     background-color: lightgray;
     text-align: right;
 }
+
+.display-linebreak {
+    white-space: pre-line;
+}

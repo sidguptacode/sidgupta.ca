@@ -35,7 +35,8 @@ function HomePage () {
 function Description () {
     return (
         <div className="description">
-          {"Hi! My name is Sid, and I'm a recent Computer Science graduate from the University of Toronto. Starting July 2022, I will be working at PathAI in Boston MA, on AI systems for pathology."}
+          {/* {"Hi! My name is Sid, and I'm a recent Computer Science graduate from the University of Toronto. Starting July 2022, I will be working at PathAI in Boston MA, on AI systems for pathology."} */}
+          {"Hello! My name is Sid, and I am a machine learning engineer and researcher."}
           <br/><br/>
           {/* {"In my research I focus on machine learning, interpretability, and computer vision for healthcare. "} */}
           {/* {"I'm currently doing research with "}
@@ -47,6 +48,8 @@ function Description () {
           {" in computer vision."}
           <br/><br/>
           {"Before research, I spent some time working at Intel and Apple as a software engineering intern, and have also TA'd a few first year CS classes (CSC165/110/111)."} */}
+          {"Previously I worked at PathAI developing machine learning models for translational cancer research, and also conducted research at the University of Toronto in machine learning, computer vision, & medical imaging."}
+          <br/><br/>
           {"Here I share some projects that I've been a part of. These projects explain why I'm so excited about computer science and data."}
           <br/><br/>
           {"I like teaching and learning from others; I think I am pretty easy going and approachable, so feel free to reach out using the contacts below 🙂"} 

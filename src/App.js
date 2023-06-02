@@ -6,6 +6,8 @@ import { HashRouter } from 'react-router-dom'
 import Research from "./Components/Research/Research"
 import Information from "./Components/Research/Information"
 import Courses from "./Components/Courses"
+import MLHealth from "./Components/MLHealth"
+
 
 function App () {
   return (
