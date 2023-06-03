@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles.css'
 import Sidebar from '../Sidebar'
 import Contact from '../Contact'
@@ -7,9 +7,14 @@ import {getComponents} from './helpers'
 import {papersInfo, projectsInfo, infoList, classProjectsInfo} from './constants'
 import '../../bower_components/bootstrap/dist/css/bootstrap.min.css'
 import './pubs.scss'
-
+import ReactGA from "react-ga4";
 
 function HomePage () {
+
+    useEffect(() => {
+        ReactGA.send({ hitType: "pageview", page: "/projects", title: "Projects" });
+    }, []);
+
     return (
         <div className="pageContainer">
             <div/>

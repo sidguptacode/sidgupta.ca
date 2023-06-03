@@ -8,6 +8,8 @@ import Information from "./Components/Research/Information"
 import Courses from "./Components/Courses"
 import MLHealth from "./Components/MLHealth"
 
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-HN2VX7KG13");
 
 function App () {
   return (
