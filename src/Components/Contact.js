@@ -20,7 +20,7 @@ function Contact () {
         <div className="contactButtons">
           <div className="leftContactButton">
             <IconButton onMouseEnter={() => setHoverInMail(true)} onMouseLeave={() => setHoverInMail(false)}>
-              <a href={'mailto:sid.gupta@mail.utoronto.ca'}>
+              <a href={'mailto:sidgupta781@gmail.com'}>
                 <EmailIcon className="emailIcon" style={{width: 25, height: 25, color: (hoverInMail ? '#1976d2' : 'gray')}}/>
               </a>
             </IconButton>
