@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.bf1928ec.css",
   "main.css.map": "static/css/main.bf1928ec.css.map",
-  "main.js": "static/js/main.a0f1fe7a.js",
-  "main.js.map": "static/js/main.a0f1fe7a.js.map",
+  "main.js": "static/js/main.a0bb7025.js",
+  "main.js.map": "static/js/main.a0bb7025.js.map",
   "static/media/Contour_Image_Completion.pdf": "static/media/Contour_Image_Completion.6f24189b.pdf",
   "static/media/GithubBlack.svg": "static/media/GithubBlack.b53ff55e.svg",
   "static/media/GithubGrey.svg": "static/media/GithubGrey.9fc4f353.svg",
@@ -22,6 +22,7 @@
   "static/media/glyphicons-halflings-regular.woff": "static/media/glyphicons-halflings-regular.fa277232.woff",
   "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.448c34a5.woff2",
   "static/media/interp_itracker.png": "static/media/interp_itracker.11c7413e.png",
+  "static/media/ml_agglutination.pdf": "static/media/ml_agglutination.80bf4e57.pdf",
   "static/media/pubs.scss": "static/media/pubs.ec9d28fe.scss",
   "static/media/scf_inpainting.png": "static/media/scf_inpainting.0d026ab1.png",
   "static/media/vis_fairness.png": "static/media/vis_fairness.591fcf40.png",
