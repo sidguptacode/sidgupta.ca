@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import {
-  isMobile
-} from "react-device-detect";
 import './styles.css';
+
+import React, { useEffect, useState } from 'react';
+
 import { Link } from 'react-router-dom'
 // import Resume from  '../../node_modules/Sid_Gupta_Resume_June2023.pdf'
 import ReactGA from "react-ga4";
+import {
+  isMobile
+} from "react-device-detect";
 
 function Sidebar () {
     const [hoverInHome, setHoverInHome] = useState(false);
@@ -27,13 +29,13 @@ function Sidebar () {
         {/* <a href="google.com" className='sidebarItem' onMouseEnter={() => setHoverInCourses(true)} onMouseLeave={() => setHoverInCourses(false)} style={{color: (!hoverInCourses ? "#6069E6" : '#242F92')}}>
           {"Teaching & writing"}
         </a> */}
-        <a href={process.env.PUBLIC_URL + "Sid_Gupta_Resume.pdf"} className='sidebarItem' onMouseEnter={() => setHoverInResume(true)} onMouseLeave={() => setHoverInResume(false)} onClick={() => {
+        <a href={process.env.PUBLIC_URL + "Sidharth_Gupta_CV.pdf"} className='sidebarItem' onMouseEnter={() => setHoverInResume(true)} onMouseLeave={() => setHoverInResume(false)} onClick={() => {
             ReactGA.event({
               category: "resume",
               action: "resume click",
             });
         }} style={{color: (!hoverInResume ? "#6069E6" : '#242F92')}}>
-          {"Resume"}
+          {"Resume / CV"}
         </a>
         <br/>
       </div>

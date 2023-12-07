@@ -1,15 +1,15 @@
-import bloodagglutination from '../../images/blood_agglutination.png';
-import scfinpainting from '../../images/scf_inpainting.png';
-import aphrodite from '../../images/aphrodite_logo.png';
-import itracker from '../../images/interp_itracker.png';
-import fairness from '../../images/vis_fairness.png';
 import agglutination from '../../images/agglutination.png';
-import fairnesspdf from '../../pdfs/visualizing_ml_fairness.pdf';
-import itrackerpdf from '../../pdfs/explaining_itracker.pdf';
-import coughmotion from '../../pdfs/coughmotion.pdf';
+import aphrodite from '../../images/aphrodite_logo.png';
+import bloodagglutination from '../../images/blood_agglutination.png';
 import cough from '../../images/coughmotion.png';
+import coughmotion from '../../pdfs/coughmotion.pdf';
+import fairness from '../../images/vis_fairness.png';
+import fairnesspdf from '../../pdfs/visualizing_ml_fairness.pdf';
+import itracker from '../../images/interp_itracker.png';
+import itrackerpdf from '../../pdfs/explaining_itracker.pdf';
+import ml_agglutination from '../../pdfs/ml_agglutination.pdf';
 import scf from '../../pdfs/Contour_Image_Completion.pdf';
-
+import scfinpainting from '../../images/scf_inpainting.png';
 
 var infoList = [
     "1. Combining multiple modalities of data to emulate clinical predictions",
@@ -24,7 +24,7 @@ var papersInfo = {
         "image": agglutination,
         'authors': ['S. Gupta', 'A. Sklavounos', 'J. Dahmer', 'A. Yong', 'M. Abdullah', 'G. Camacho', 'K. Morton', 'M. Shiu', 'J. Labrecque', 'T. Veres', 'A. Wheeler', 'A. Mariakakis'],
         'conference': 'Published to IEEE PerCom 2022',
-        'PDF': "https://ieeexplore.ieee.org/abstract/document/9767280",
+        'PDF': ml_agglutination,
         'Code': "https://github.com/sidguptacode/ML_AT_Interpretation",
     },
     "scf_inpainting":
@@ -42,7 +42,7 @@ var papersInfo = {
         "image": bloodagglutination,
         'authors': ['A. Sklavounos', 'J. Lamanna', 'D. Modi', 'S. Gupta', 'J. Callum', 'A. Mariakakis', 'A. Wheeler'],
         'conference': 'Published to Oxford Academic - Clinical Chemistry 2021',
-        'PDF': 'https://academic.oup.com/clinchem/advance-article-abstract/doi/10.1093/clinchem/hvab180/6377222?redirectedFrom=fulltext',
+        'PDF': 'https://microfluidics.utoronto.ca/papers/hvab180.pdf',
         'Code (coming soon)': 'Code will be released soon'
         // 'Video': ""
     }

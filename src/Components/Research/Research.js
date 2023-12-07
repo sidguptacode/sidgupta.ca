@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
 import '../styles.css'
-import Sidebar from '../Sidebar'
-import Contact from '../Contact'
 import './localstyles.css'
-import {getComponents} from './helpers'
-import {papersInfo, projectsInfo, infoList, classProjectsInfo} from './constants'
 import '../../bower_components/bootstrap/dist/css/bootstrap.min.css'
 import './pubs.scss'
+
+import React, { useEffect, useState } from 'react';
+import {classProjectsInfo, infoList, papersInfo, projectsInfo} from './constants'
+
+import Contact from '../Contact'
 import ReactGA from "react-ga4";
+import Sidebar from '../Sidebar'
+import {getComponents} from './helpers'
 
 function HomePage () {
 
@@ -46,13 +48,15 @@ function LeftInfo() {
         </React.Fragment>
     ));
     return (
-        <div className="leftInfo" style={{verticalAlign: 'bottom'}}>
+        <div className="leftInfo" style={{verticalAlign: 'bottom', lineHeight: 1.5}}>
             {/* {"I hope to continue research in machine learning, interpretability, and computer vision for healthcare. To date, my research and projects encompass"} */}
             {/* {":"} */}
-            {"My career goals are to use computer science and data to reduce indecision, uncertainty, and inaccessibility in problems. I am particularly interested in healthcare and social science problems."}
+            {"My career goals are to use AI to reduce indecision, uncertainty, and inaccessibility in problems. I am most interested in developing AI tools for healthcare research."}
+            {/* <br/> */}
             <br/>
             <br/>
-            {"I have had heaps of help from very many people -- friends, peers, classmates, colleagues, mentors, supervisors, and more. These people are really the backbone to all the work here."}
+            {/* {" I have learned the importance of building things that help people, from selfless teachers, mentors, colleagues, friends, and family."} */}
+            {"I am greatly inspired by selfless teachers, mentors, colleagues, friends, and family to build things that help people."}
             <br/>
             <br/>
             {/* <div className="leftInfoList">
